@@ -4,23 +4,23 @@
 - **Mac Guide**
   - Step 1: Installing Miniconda
      - Open terminal
-     - IF DEFAULT SHELL IS NOT BASH, change shell to bash by running: `**_chsh -s /bin/bash_**`, Otherwise, skip this step
+     - IF DEFAULT SHELL IS NOT BASH, change shell to bash by running: `chsh -s /bin/bash`, Otherwise, skip this step
      - Download the installer by either:
-       - Downloading the installer directly from `**_https://repo.anaconda.com/miniconda/Miniconda3-py39_4.10.3-MacOSX-x86_64.sh_**` 
+       - Downloading the installer directly from `https://repo.anaconda.com/miniconda/Miniconda3-py39_4.10.3-MacOSX-x86_64.sh` 
             and moving the downloaded file into your root directory
-       - Running: `**_curl -sL https://repo.anaconda.com/miniconda/Miniconda3-py39_4.10.3-MacOSX-x86_64.sh > Miniconda3-py39_4.10.3-MacOSX-x86_64.sh_**`
-       - Running: `**_wget https://repo.anaconda.com/miniconda/Miniconda3-py39_4.10.3-MacOSX-x86_64.sh_**`
-    - Run: `**_bash Miniconda3-py39_4.10.3-MacOSX-x86_64.sh_**`
+       - Running: `curl -sL https://repo.anaconda.com/miniconda/Miniconda3-py39_4.10.3-MacOSX-x86_64.sh > Miniconda3-py39_4.10.3-MacOSX-x86_64.sh`
+       - Running: `wget https://repo.anaconda.com/miniconda/Miniconda3-py39_4.10.3-MacOSX-x86_64.sh`
+    - Run: `bash Miniconda3-py39_4.10.3-MacOSX-x86_64.sh`
     - Follow the on screen instructions and accept everything as the default versions
     - Close and reopen terminal
     - Type the command: conda list to check that it installed correctly!
   - Step 2: Setting up a conda environment
-    - Run: `**_conda create -n myenvname python=3.9.6 numpy=1.21.2 scipy=1.7.1_**` Where myenvname is replaced by whatever you want to name your environment. 
-    - If the above doesn’t work, run `**_conda config --append channels conda-forge_**` and then rerun the first step
+    - Run: `conda create -n myenvname python=3.9.6 numpy=1.21.2 scipy=1.7.1` Where myenvname is replaced by whatever you want to name your environment. 
+    - If the above doesn’t work, run `conda config --append channels conda-forge` and then rerun the first step
   - Step 3: Using your conda environment
-    - Run: `**_conda activate myenvname_**` to switch into your environment, which will be indicated by the start of your terminal line having (myenvname) at the front of it: 
+    - Run: `conda activate myenvname` to switch into your environment, which will be indicated by the start of your terminal line having (myenvname) at the front of it: 
       Note: This command must be run every time you start a new terminal session!
-    - If you ever want to switch to your base environment or a different environment, run: `**_conda deactivate_**`
+    - If you ever want to switch to your base environment or a different environment, run: `conda deactivate`
 	
 
 
