@@ -38,5 +38,9 @@
     - Run: `**_conda activate myenvname_**` to switch into your environment, which will be indicated by the start of your anaconda prompt line having (myenvname) at the front of it:
       Note: This command must be run every time you start a new Anaconda Prompt session!
     - If you ever want to switch to your base environment or a different environment, run: `**_conda deactivate_**`
+   
+- **Change Version**
+   - Example:	
+	-`conda install -c conda-forge numpy=1.16.4`
 	
 
