@@ -1,5 +1,7 @@
 # Task
 * Implement a binary classifier, entirely from scratch–specifically a Decision Tree learner
+
+# Detail
 - **Inspecting the data**
   - **_inspection.py_** calculate the label entropy at the root(i.e. the entropy of the labels before any splits) and the error rate (the percent of incorrectly classified instance) of classifying using a majority vote (picking the label with the most examples). 
   - **Command Line Arguments** `$python inspection.py <input> <output>`
