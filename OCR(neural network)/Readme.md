@@ -5,8 +5,15 @@
 * Optical Character Recognition (OCR) dataset
 * Original images are black-and-white (not grayscale), the pixel values are either 0 or 1
 
-# Feature Engineer
-* bag-of-words (BoW) model
+# Model
+* Single-hidden-layer neural network with a sigmoid activation function for the hidden layer, and a softmax on the output layer.
+* Loss Function
+  - average cross entropy over the training dataset $D = {(x(i), y(i))}$
+  - $J(\alpha, \beta) = -\frac{1}{N}\sum\sum y^i_k \log (\hat{y}_k^i)$
+* Optimizer
+  - SGD (stochastic gradient descent)
+  - $J_{SGD}(\alpha, \beta) = -\sum y^i_k \log (\hat{y}_k^i)$
+
   - $\phi_1(x^i) = 1_{occur}(x^i, \text{Vocab})$ 
   - indicates which words in vocabulary Vocab occur at least once in the i-th movie review $x^i$
 * word embeddings model
