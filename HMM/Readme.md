@@ -20,16 +20,23 @@
     - $x_1, \cdots, x_T$
   - Hidden state
     - $Y_1, \cdots, Y_T$  
-  - Transition Matrix 
-    - $B$
+  - Transition Matrix, $B$
     - $B_{jk} = P(Y_t = s_k | Y_{t-1} = s_j)$
-  - Emission Matrix
-    - $A$
-    - $A$   
+  - Emission Matrix, $A$
+    - $A_{jk} = P(X_t = k | Y_t = s_j)$
+  - Initialization Matrix for $Y_1$, $\pi$     
+    - $\pi_j = P(Y_1 = s_j)$
+  - Maximum product of all the probabilities taken through path $Y_1, \cdots, Y_{t-1}$ that $Y_t = s_k$, $w_t(s_k)$
+    - $w_t(s_k) = max_{y_1, \cdot, y_{t-1}} P(x_{1:t}, y_{1:t-1}, Y_t = s_k)$ 
+  - Backpointer that stores the path through hidden states that gives us the highest product, $b_t(s_k)$
+    - $b_t(s_k) = argmax_{y_1, \cdot, y_{t-1}} P(x_{1:t}, y_{1:t-1}, Y_t = s_k)$
 * $P(Y_t = s_j|x_{1:T})\propto P(Y_t = s_j, x_{t+1:T}|x_{1:t})\propto P(Y_t = s_j|x_{1:t})P(x_{t+1:T}| Y_t = s_j, x_{1:t})\propto P(Y_t = s_j|x_{1:t})P(x_{t+1:T}| Y_t = s_j)\propto P(Y_t = s_j, x_{1:t})P(x_{t+1:T}| Y_t = s_j)  $
   - Forward Algorithm
     -  $\alpha_t(s_j) = P(Y_t = s_j, x_{1:t})$
-    -  
+    -  $\alpha_1(s_j) = \pi_j A_{j,x_1}$, $\alpha_t(s_j) = A_{j x_t}\sum_k B_{kj}\alpha_{t-1}(k)$
+  - Backward Algorithm
+    - $\beta_t(s_j) = P(x_{t+1:T}|Y_t = s_j)$
+    - $\beta_T(s_j) = 1$, $\beta_t(s_j) = \sum_k A_{k, x_{t+1}} \beta_{t+1}(s_k) B_{jk}$ 
 * bag-of-words (BoW) model
   - $\phi_1(x^i) = 1_{occur}(x^i, \text{Vocab})$ 
   - indicates which words in vocabulary Vocab occur at least once in the i-th movie review $x^i$
