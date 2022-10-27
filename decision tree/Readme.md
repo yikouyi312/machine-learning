@@ -1,8 +1,10 @@
-- **Program #1: Inspecting the data**
+# Task
+* Implement a binary classifier, entirely from scratch–specifically a Decision Tree learner
+- **Inspecting the data**
   - **_inspection.py_** calculate the label entropy at the root(i.e. the entropy of the labels before any splits) and the error rate (the percent of incorrectly classified instance) of classifying using a majority vote (picking the label with the most examples). 
   - **Command Line Arguments** `$python inspection.py <input> <output>`
 
-- **Program #2: Decision Tree Learner**
+- **Decision Tree Learner**
   - **_decision_tree.py_** learn a decision tree with a specified maximum depth.
   - **requirements:**
     - Use mutual information to determine which attribute to split on. For a split on arrtibute X, `I(Y;X)= H(Y)-H(Y|X)=H(Y)-P(X=0)H(Y|X=0)-P(X=1)H(Y|X=1)`.
