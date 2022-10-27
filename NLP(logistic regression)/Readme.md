@@ -24,5 +24,6 @@
 
 # Logistic regression classifier
 * Implements a logistic regression classifier that takes in formatted training data and produces a label (either 0 or 1) that corresponds to whether each movie review was negative or positive.
+* Maxmize likelihood $=$ Minimize negative conditional log-likelihood
 * `lr.py`
   - **Command Line Arguments** `$python lr.py <formatted train input> <formatted validation input> <formatted test input> <train out> <test out> <metricsout> <numepoch> <learningrate>`
