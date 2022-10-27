@@ -9,7 +9,14 @@
 
 # Feature Engineer
 * bag-of-words (BoW) model
+  - $\phi_1(x^i) = 1_{occur}(x^i, \text{Vocab})$ 
+  - indicates which words in vocabulary Vocab occur at least once in the i-th movie review $x^i$
 * word embeddings model
+  - represent each word by “embedding” it into a low-dimensional vector space, which may carry more information about the semantic meaning of the word.
+  - *word2vec embedding*
+  - word2vec.txt contains the word2vec embeddings of 15k words
+  - format `word\tfeature1\tfeature2\t...feature300\n.`
+  - $\phi_2(x^i) = \frac{1}{J} \sum \textit{word2vec}(xtrim_j^i)$
 
 - **Inspecting the data**
   - **_inspection.py_** calculate the label entropy at the root(i.e. the entropy of the labels before any splits) and the error rate (the percent of incorrectly classified instance) of classifying using a majority vote (picking the label with the most examples). 
