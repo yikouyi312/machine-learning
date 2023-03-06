@@ -17,8 +17,6 @@
   - **Command Line Arguments** `$python feature.py <train input> <validation input> <test input> <dict input> <feature dictionary input> <formatted train out> <formatted validation out> <formatted test out> <feature flag>`
 
 
-# Logistic regression classifier
-
-* `lr.py`
-  - **Command Line Arguments** `$ python q learning.py [args...]`
-  - `$python lr.py <formatted train input> <formatted validation input> <formatted test input> <train out> <test out> <metricsout> <numepoch> <learningrate>`
+#  Q-learning algorithm
+* `q_learning.py`
+  - **Command Line Arguments** `$ python q_learning.py <env> <mode> <weight out> <returns out> <episodes> <max iterations> <epsilon> <gamma> <learning rate>`
