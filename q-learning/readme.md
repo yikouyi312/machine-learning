@@ -13,9 +13,8 @@
 
 # Model
 * Q-learning with Linear Approximations
-
-  - **Command Line Arguments** `$python feature.py <train input> <validation input> <test input> <dict input> <feature dictionary input> <formatted train out> <formatted validation out> <formatted test out> <feature flag>`
-
+  - Rule
+    - $Q(s,a) = (1-\alpha)Q(s,a) + \alpha(r+ \gamma\max_{a'}Q(s',a'))$
 
 #  Q-learning algorithm
 * `q_learning.py`
