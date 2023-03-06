@@ -20,4 +20,6 @@
   - Decision Tree Learner
 
 # Q-learning
-* 
+* Implement Q-learning with linear function approximation to solve the mountain car environment
+* In Mountain Car need control a car that starts at the bottom of a valley. Our goal is to reach the flag at the top right
+
